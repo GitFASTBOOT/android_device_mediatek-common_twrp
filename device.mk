@@ -23,6 +23,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
+# vendor_boot
+ifeq ($(BOARD_BOOT_HEADER_VERSION),4)
+  $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+endif
+
 # Inherit some common twrp stuff.
 $(call inherit-product-if-exists, vendor/twrp/config/common.mk)
 
