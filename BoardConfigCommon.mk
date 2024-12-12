@@ -71,3 +71,8 @@ ifeq ($(BOARD_BOOTIMG_HEADER_VERSION),2)
   include device/mediatek/common/boot.mk
 endif
 
+# Vendor_boot
+ifeq ($(BOARD_BOOTIMG_HEADER_VERSION),4)
+  include device/mediatek/common/vendor_boot.mk
+endif
+
