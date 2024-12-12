@@ -63,5 +63,6 @@ TARGET_USES_MKE2FS := true
 ## Inherit partitions flags
 include device/mediatek/common/partitions.mk
 
-
+# Twrp flags
+include device/mediatek/common/TW_flags.mk
 
