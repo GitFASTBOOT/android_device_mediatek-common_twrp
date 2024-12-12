@@ -45,3 +45,8 @@ TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 # Recovery
 BOARD_USES_RECOVERY_AS_BOOT := true
 
+# Size
+ifeq ($(BOARD_BOOTIMAGE_PARTITION_SIZE),33554432)
+  include $(COMMON_PATH)/32mb.mk
+endif
+
