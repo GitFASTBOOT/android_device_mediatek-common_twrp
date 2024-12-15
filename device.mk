@@ -34,6 +34,11 @@ $(call inherit-product-if-exists, vendor/twrp/config/common.mk)
 # Inherit some common pb stuff.
 $(call inherit-product-if-exists, vendor/pb/config/common.mk)
 
+# Crypto
+ifeq ($(TW_INCLUDE_CRYPTO),true)
+  $(call inherit-product, device/mediatek/common/crypto.mk)
+endif
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 

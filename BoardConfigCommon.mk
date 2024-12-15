@@ -14,6 +14,7 @@
 # limitations under the License.
 
 COMMON_PATH := device/mediatek/common
+CRYPTO_PATH := device/mediatek/common/crypto_configs
 
 TARGET_RECOVERY_DEVICE_DIRS := \
     $(COMMON_PATH) \
